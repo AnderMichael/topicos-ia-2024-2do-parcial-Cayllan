@@ -78,5 +78,13 @@
         "dish": "Plato Pace\u00f1o",
         "cost": 54,
         "reservation_type": "RestaurantReservation"
+    },
+    {
+        "checkin_date": "2020-08-21",
+        "checkout_date": "2020-08-22",
+        "hotel_name": "Urbina",
+        "city": "Oruro",
+        "cost": 351,
+        "reservation_type": "HotelReservation"
     }
 ]

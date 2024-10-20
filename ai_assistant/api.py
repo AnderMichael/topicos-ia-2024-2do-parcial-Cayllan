@@ -27,6 +27,8 @@ def reserve_flight_message(date_str: str, departure: str, destination: str) -> s
 def reserve_bus_message(date_str: str, departure: str, destination: str) -> str:
     return f"Bus ticket booked from {departure} to {destination} on {date_str}"
 
+class InvalidDateOrderException(Exception):
+    pass
 
 def reserve_hotel_message(
     start_date_str: str, end_date_str: str, hotel: str, city: str
@@ -124,6 +126,8 @@ def reserve_hotel_endpoint(
     start_date: date, end_date: date, hotel: str, city: str
 ) -> ReservationAPIResponse:
     try:
+        if end_date <= start_date:
+            raise InvalidDateOrderException("La fecha de checkout debe ser posterior a la fecha de checkin")
         reserve_hotel(start_date.isoformat(), end_date.isoformat(), hotel, city)
         return ReservationAPIResponse(
             status="Success",

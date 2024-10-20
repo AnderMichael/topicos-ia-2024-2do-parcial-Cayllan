@@ -181,11 +181,12 @@ def trip_summary(file_path: str = "trip.json") -> TripSummary:
         # Process each reservation and organize data
         for item in trip_data:
             reservation_type = item.get("reservation_type")
+            trip_type = item.get("trip_type")
             if reservation_type == "TripReservation":
                 place = f"{item['departure']} to {item['destination']}"
                 activity_date = item["date"]
                 description = (
-                    f"Flight from {item['departure']} to {item['destination']}"
+                    f"{trip_type} from {item['departure']} to {item['destination']}"
                 )
             elif reservation_type == "HotelReservation":
                 place = item["city"]
@@ -194,7 +195,7 @@ def trip_summary(file_path: str = "trip.json") -> TripSummary:
             elif reservation_type == "RestaurantReservation":
                 place = item["city"]
                 activity_date = item["reservation_time"]
-                description = f"Restaurant reservation at {item['restaurant']} at {item['reservation_time']}"
+                description = f"Restaurant reservation at {item['restaurant']} at {item['reservation_time']}. Dish: {item['dish']}"
             else:
                 continue
 
