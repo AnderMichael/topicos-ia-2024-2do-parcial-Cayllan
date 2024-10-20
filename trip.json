@@ -1,34 +1,82 @@
 [
     {
-        "checkin_date": "2023-10-05",
-        "checkout_date": "2023-10-10",
-        "hotel_name": "Hotel Europa",
-        "city": "La Paz",
-        "cost": 835,
-        "reservation_type": "HotelReservation"
-    },
-    {
-        "reservation_time": "2023-10-05T14:00:00",
-        "restaurant": "La Casa del Camba",
-        "city": "La Paz",
-        "dish": "Churrasco",
-        "cost": 73,
+        "reservation_time": "2024-08-21T20:00:00",
+        "restaurant": "La Floresta",
+        "city": "Tarija",
+        "dish": "Buffet Vegetariano",
+        "cost": 98,
         "reservation_type": "RestaurantReservation"
     },
     {
-        "checkin_date": "2023-10-05",
-        "checkout_date": "2023-10-07",
-        "hotel_name": "Oruro",
+        "trip_type": "FLIGHT",
+        "date": "2023-10-04",
+        "departure": "Tarija",
+        "destination": "La Paz",
+        "cost": 371,
+        "reservation_type": "TripReservation"
+    },
+    {
+        "reservation_time": "2023-10-04T17:00:00",
+        "restaurant": "La Posta",
+        "city": "La Paz",
+        "dish": "Pizza hawaiana",
+        "cost": 94,
+        "reservation_type": "RestaurantReservation"
+    },
+    {
+        "trip_type": "BUS",
+        "date": "2023-10-06",
+        "departure": "La Paz",
+        "destination": "Tiwanaku",
+        "cost": 191,
+        "reservation_type": "TripReservation"
+    },
+    {
+        "trip_type": "FLIGHT",
+        "date": "2023-07-22",
+        "departure": "La Paz",
+        "destination": "Oruro",
+        "cost": 377,
+        "reservation_type": "TripReservation"
+    },
+    {
+        "checkin_date": "2023-07-22",
+        "checkout_date": "2023-07-27",
+        "hotel_name": "Pub the Alpaca",
         "city": "Oruro",
-        "cost": 959,
+        "cost": 805,
         "reservation_type": "HotelReservation"
     },
     {
-        "reservation_time": "2023-10-05T18:00:00",
-        "restaurant": "Churrasquer\u00eda El Rodeo",
-        "city": "Tarija",
-        "dish": "Not specified",
-        "cost": 83,
+        "trip_type": "FLIGHT",
+        "date": "2023-12-24",
+        "departure": "Oruro",
+        "destination": "Tarija",
+        "cost": 458,
+        "reservation_type": "TripReservation"
+    },
+    {
+        "checkin_date": "2025-01-10",
+        "checkout_date": "2025-01-15",
+        "hotel_name": "Hotel Don Quijote",
+        "city": "Cobija",
+        "cost": 140,
+        "reservation_type": "HotelReservation"
+    },
+    {
+        "checkin_date": "2025-12-20",
+        "checkout_date": "2025-12-23",
+        "hotel_name": "Don Quijote",
+        "city": "Cobija",
+        "cost": 384,
+        "reservation_type": "HotelReservation"
+    },
+    {
+        "reservation_time": "2023-10-15T19:00:00",
+        "restaurant": "Pensi\u00f3n Aransaya",
+        "city": "La Paz",
+        "dish": "Plato Pace\u00f1o",
+        "cost": 54,
         "reservation_type": "RestaurantReservation"
     }
 ]

@@ -162,8 +162,9 @@ restaurant_tool = FunctionTool.from_defaults(fn=reserve_restaurant, return_direc
 def trip_summary(file_path: str = "trip.json") -> TripSummary:
     """
     Summarizes the content of the log file, organizing saved activities by place and date,
-    calculating the total budget, and providing comments on each place and activity.
-
+    calculating the total budget, and providing comments on each place and activity, giving all the details in final description.
+    MANDATORY: Do not memoize these information it can change during the requests.
+    IMPORTANT: Erase information to update in the next query.
     Parameters:
     - file_path: Path to the trip.json file containing trip activities and details. There is a path by default.
 
