@@ -1,0 +1,17 @@
+opencv-python
+fastapi[standard]
+numpy
+matplotlib
+requests 
+beautifulsoup4
+scikit-learn 
+matplotlib
+openai
+python-dotenv
+llama-index
+llama-index-embeddings-huggingface
+llama-index-readers-wikipedia
+llama-index-llms-ollama
+wikipedia
+Wikipedia-API
+gradio
