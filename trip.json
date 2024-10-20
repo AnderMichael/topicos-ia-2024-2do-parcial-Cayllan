@@ -14,5 +14,21 @@
         "dish": "Churrasco",
         "cost": 73,
         "reservation_type": "RestaurantReservation"
+    },
+    {
+        "checkin_date": "2023-10-05",
+        "checkout_date": "2023-10-07",
+        "hotel_name": "Oruro",
+        "city": "Oruro",
+        "cost": 959,
+        "reservation_type": "HotelReservation"
+    },
+    {
+        "reservation_time": "2023-10-05T18:00:00",
+        "restaurant": "Churrasquer\u00eda El Rodeo",
+        "city": "Tarija",
+        "dish": "Not specified",
+        "cost": 83,
+        "reservation_type": "RestaurantReservation"
     }
 ]

@@ -11,7 +11,6 @@ from ai_assistant.models import (
     HotelReservation,
     RestaurantReservation,
     TripSummary,
-    Activity,
 )
 from ai_assistant.utils import save_reservation
 
