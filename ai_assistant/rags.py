@@ -8,6 +8,7 @@ from llama_index.core import (
     Settings,
 )
 from llama_index.core.query_engine import RetrieverQueryEngine
+from llama_index.core.chat_engine import ContextChatEngine
 from llama_index.llms.openai import OpenAI
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from ai_assistant.config import get_agent_settings
@@ -53,3 +54,12 @@ class TravelGuideRAG:
             )
 
         return query_engine
+    
+    def get_chat_engine(self) -> ContextChatEngine:
+        chat_engine = self.index.as_chat_engine()
+        if self.qa_prompt_tpl is not None:
+            chat_engine.update_prompts(
+                {"response_synthesizer:text_qa_template": self.qa_prompt_tpl}
+            )
+            
+        return chat_engine

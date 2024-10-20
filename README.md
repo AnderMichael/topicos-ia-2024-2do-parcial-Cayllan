@@ -1,5 +1,9 @@
 # Asistente de Viajes - Segundo Parcial - Topicos IA 2024
 
+*Nombre:* **Ander Michael Cayllan Mamani**
+
+*Código:* **63428**
+
 Este repositorio contiene el código base para la 2da evaluacion parcial. El proyecto trata de un 
 agente AI para la gestión y planificación de viajes de turismo. El agente tiene acceso a 
 distintas fuentes de información sobre atracciones turísticas bolivianas (Travel guide), y a otras herramientas

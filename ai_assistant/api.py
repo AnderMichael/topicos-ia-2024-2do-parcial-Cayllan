@@ -45,8 +45,8 @@ def reserve_restaurant_message(
 @app.get("/recommendations/cities")
 def recommend_cities(
     notes: list[str] = Query(...), agent: ReActAgent = Depends(get_agent)
-):
-    prompt = f"recommend cities in bolivia with the following notes: {notes}"
+) -> AgentAPIResponse:
+    prompt = f"recommend the best cities in bolivia with the following notes: {notes}"
     return AgentAPIResponse(status="OK", agent_response=str(agent.chat(prompt)))
 
 
@@ -55,8 +55,8 @@ def recommend_places(
     city: str,
     notes: list[str] = Query(default=[]),
     agent: ReActAgent = Depends(get_agent),
-):
-    prompt = f"Recommend places to visit in {city}"
+) -> AgentAPIResponse:
+    prompt = f"Recommend the best places to visit in {city}"
     if notes:
         prompt += f" based on the following notes: {', '.join(notes)}"
     response = agent.chat(prompt)
@@ -68,8 +68,8 @@ def recommend_hotels(
     city: str,
     notes: list[str] = Query(default=[]),
     agent: ReActAgent = Depends(get_agent),
-):
-    prompt = f"Recommend hotels to stay in {city}"
+) -> AgentAPIResponse:
+    prompt = f"Recommend the best hotels to stay in {city}"
     if notes:
         prompt += f" based on the following notes: {', '.join(notes)}"
     response = agent.chat(prompt)
@@ -81,8 +81,8 @@ def recommend_activities(
     city: str,
     notes: list[str] = Query(default=[]),
     agent: ReActAgent = Depends(get_agent),
-):
-    prompt = f"Recommend activities to do in {city}"
+) -> AgentAPIResponse:
+    prompt = f"Recommend the best activities to do in {city}"
     if notes:
         prompt += f" based on the following notes: {', '.join(notes)}"
     response = agent.chat(prompt)
@@ -154,7 +154,7 @@ def reserve_restaurant_endpoint(
 
 
 @app.get("/trip/report")
-def generate_trip_report(agent: ReActAgent = Depends(get_agent)):
+def generate_trip_report(agent: ReActAgent = Depends(get_agent)) -> AgentAPIResponse:
     try:
         prompt = f"Generate a detailed travel report of my trip"
         response = agent.chat(prompt)
