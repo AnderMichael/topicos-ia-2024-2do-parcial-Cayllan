@@ -1,7 +1,7 @@
 from pydantic import BaseModel, Field
 from enum import Enum
 from datetime import date, datetime
-
+from typing import List, Dict
 
 class TripType(str, Enum):
     flight = "FLIGHT"
@@ -31,8 +31,24 @@ class RestaurantReservation(BaseModel):
     dish: str
     cost: int
 
-
 class AgentAPIResponse(BaseModel):
     status: str
     agent_response: str
     timestamp: datetime = Field(default_factory=datetime.now)
+
+class ReservationAPIResponse(BaseModel):
+    status: str
+    message: str
+    timestamp: datetime = Field(default_factory=datetime.now)
+    
+class Activity(BaseModel):
+    date: datetime
+    place: str
+    description: str
+    cost: float
+    comments: str
+
+class TripSummary(BaseModel):
+    total_budget: float
+    activities_by_place: Dict[str, List[Dict[str, str]]]
+    summary: str
